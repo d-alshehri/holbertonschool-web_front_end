@@ -1,6 +1,6 @@
-/* 
+/*
   styles/18-style.css
-  Task 18: Style the navbar and its elements with custom properties
+  Task 18: Navbar styling with variables and custom rules
 */
 
 /* Universal box-sizing rule */
@@ -10,51 +10,59 @@
   
   /* Root custom properties */
   :root {
-    /* Inherited font and spacing variables from previous tasks */
-    --color-primary: #d73953;
-    --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-weight-bold: 700;
-    --font-size-medium: 1.6rem;
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
   
-    /* New navbar-specific custom properties */
+    /* Navbar-related variables */
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: 0.4rem; /* 4% of root element (10px * 4%) */
+    --nav-item-letter-spacing: 0.4rem; /* 4% of root (4% = 0.4rem) */
     --nav-item-display: inline-block;
-    --nav-item-margin: 3rem 0 0 0;
+    --nav-item-margin: 0 0 3rem 0; /* 3rem bottom, 0 elsewhere */
     --nav-item-link-hover: var(--color-primary);
   }
   
-  /* Normalize styles (shortened for brevity) */
-  /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-  html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
+  /* Normalize - already defined in previous steps */
+  
+  /* Section styles */
+  .section {
+    padding: var(--section-padding);
   }
-  body {
-    margin: 0;
+  .section-header {
+    padding: var(--section-header-padding);
   }
-  main {
-    display: block;
+  .section-body {
+    padding: var(--section-body-padding);
+  }
+  .section-footer {
+    padding: var(--section-footer-padding);
+    text-align: var(--section-footer-align);
+  }
+  .footer {
+    padding: var(--footer-padding);
   }
   
-  /* Navbar styles */
+  /* === Navbar Styles === */
   
-  /* Float navbar-menu to the right */
+  /* Float navbar menu to right */
   .navbar-menu {
     float: right;
   }
   
-  /* nav tag base reset and alignment */
+  /* nav element: no margin, no padding, no list-style, center text */
   nav {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style: none; /* ensures no bullets */
     text-align: center;
   }
   
-  /* nav-item inside nav: apply custom font styles and spacing */
+  /* nav-item inside nav: apply typography styles and spacing */
   nav .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
@@ -64,13 +72,13 @@
     margin: var(--nav-item-margin);
   }
   
-  /* nav-link inside nav: make clickable and space inside */
+  /* nav-link inside nav: block display + spacing */
   nav .nav-link {
     display: block;
-    padding: 0.5rem 1rem; /* Half root (5px) top/bottom, root (10px) left/right */
+    padding: 0.5rem 1rem; /* top-bottom = 0.5rem, left-right = 1rem */
   }
   
-  /* Hover effect for nav-link inside nav */
+  /* Hover state of nav-link inside nav */
   nav .nav-link:hover {
     color: var(--nav-item-link-hover);
   }
