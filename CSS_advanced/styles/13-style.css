@@ -1,22 +1,27 @@
 /* Task 13: Styling anchor elements and their states */
 
-a[href] {
-    /* Targets only anchor elements with an href attribute */
-    color: var(--text-color); /* keeps color consistent */
+/* Normal unvisited links */
+a[href]:link {
+    color: var(--text-color);
+    text-decoration: none; /* Remove underline by default */
   }
   
+  /* Visited links */
   a[href]:visited {
-    font-style: italic; /* italicize visited links */
-    color: var(--text-color); /* optional, keep color consistent */
+    font-style: italic;
+    color: var(--text-color);
+    text-decoration: none; /* Keep underline removed */
   }
   
+  /* Hover state */
   a[href]:hover {
     text-decoration: underline; /* underline on hover */
-    color: var(--text-color); /* optional, keep color consistent */
+    color: var(--text-color);
   }
   
+  /* Active state */
   a[href]:active {
-    background-color: var(--color-light-grey); /* background on active */
-    color: var(--text-color); /* optional, keep color consistent */
+    background-color: var(--color-light-grey);
+    color: var(--text-color);
   }
   
