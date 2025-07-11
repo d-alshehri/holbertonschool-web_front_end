@@ -1,0 +1,5 @@
+/* Task 9: Remove underline from anchor elements */
+
+a {
+    text-decoration: none;
+  }
