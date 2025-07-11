@@ -2,59 +2,37 @@
 
 /* Root: define all global variables */
 :root {
-    /* Color variables */
-    --color-primary: #d73953;
-    --color-black: #090909;
-    --color-white: #ffffff;
-    --color-light-grey: #f3f3f3;
-    --color-dark-grey: #353535;
-  
-    --text-color: var(--color-black);
-  
-    /* Font family variables */
-    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  
-    /*  Font size variables */
-    --font-size-small: 1.2rem;
-    --font-size-medium: 1.6rem;
-    --font-size-large: 1.8rem;
-    --font-size-x-large: 2.3rem;
-    --font-size-xx-large: 4.8rem;
-  }
-  
-  /*  HTML font-size to make 1rem = 10px (default 16px × 0.625 = 10px) */
-  html {
-    font-size: 62.5%;
-  }
-  
-  /* Apply general font styles to the body */
-  body {
-    color: var(--text-color);
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-medium); /* use font-size variable */
-    font-weight: 400;
-  }
-  
-  /* Apply text color to links */
-  a {
-    color: var(--text-color);
-  }
-  
-  /* Hide elements for accessibility or visual hiding */
-  .visually-hidden {
-    display: none;
-  }
-  
-  /* Tagline and category get the primary color */
-  .section-tagline,
-  .card-category {
-    color: var(--color-primary);
-  }
-  
-  /* Headings use title font family */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-title);
-    font-weight: 700;
-  }
-  
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+  --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-x-large: 2.3rem;
+  --font-size-xx-large: 4.8rem;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-title);
+}
+body, a {
+  color: var(--text-color);
+}
+.visually-hidden {
+  display: none;
+}
+.card-category, .section-tagline {
+  color: var(--color-primary);
+}
