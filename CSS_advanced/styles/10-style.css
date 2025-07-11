@@ -1,0 +1,17 @@
+/* Task 10: Add custom property for section header alignment and apply it */
+
+:root {
+    --section-header-align: center; /* new custom property */
+    --color-primary: #d73953; /* assuming you already have this from before */
+  }
+  
+  /* Just above the section-tagline */
+  .section-header {
+    text-align: var(--section-header-align); /* use the custom property */
+  }
+  
+  /* Existing selector */
+  .section-tagline {
+    color: var(--color-primary);
+  }
+  
