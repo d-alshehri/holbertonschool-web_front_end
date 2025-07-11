@@ -1,0 +1,48 @@
+/* Task 4: Add font-family variables and apply them */
+
+/* Root: define color and font variables */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+  
+    --text-color: var(--color-black);
+  
+    /* New font-family variables */
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  /* Apply text color and base font to the body */
+  body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+  }
+  
+  /* Apply text color to links */
+  a {
+    color: var(--text-color);
+  }
+  
+  /* Hide elements visually (used for accessibility or hidden content) */
+  .visually-hidden {
+    display: none;
+  }
+  
+  /* Apply primary color to section taglines */
+  .section-tagline {
+    color: var(--color-primary);
+  }
+  
+  /* Apply primary color to card categories */
+  .card-category {
+    color: var(--color-primary);
+  }
+  
+  /* NEW: Apply title font-family to all heading tags */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+  }
+  
