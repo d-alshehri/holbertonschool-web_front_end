@@ -1,0 +1,77 @@
+/* 
+  styles/18-style.css
+  Task 18: Style the navbar and its elements with custom properties
+*/
+
+/* Universal box-sizing rule */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Root custom properties */
+  :root {
+    /* Inherited font and spacing variables from previous tasks */
+    --color-primary: #d73953;
+    --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-weight-bold: 700;
+    --font-size-medium: 1.6rem;
+  
+    /* New navbar-specific custom properties */
+    --nav-item-font-family: var(--font-family-title);
+    --nav-item-font-weight: var(--font-weight-bold);
+    --nav-item-font-size: var(--font-size-medium);
+    --nav-item-letter-spacing: 0.4rem; /* 4% of root element (10px * 4%) */
+    --nav-item-display: inline-block;
+    --nav-item-margin: 3rem 0 0 0;
+    --nav-item-link-hover: var(--color-primary);
+  }
+  
+  /* Normalize styles (shortened for brevity) */
+  /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+  html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+  }
+  main {
+    display: block;
+  }
+  
+  /* Navbar styles */
+  
+  /* Float navbar-menu to the right */
+  .navbar-menu {
+    float: right;
+  }
+  
+  /* nav tag base reset and alignment */
+  nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  /* nav-item inside nav: apply custom font styles and spacing */
+  nav .nav-item {
+    font-family: var(--nav-item-font-family);
+    font-weight: var(--nav-item-font-weight);
+    font-size: var(--nav-item-font-size);
+    letter-spacing: var(--nav-item-letter-spacing);
+    display: var(--nav-item-display);
+    margin: var(--nav-item-margin);
+  }
+  
+  /* nav-link inside nav: make clickable and space inside */
+  nav .nav-link {
+    display: block;
+    padding: 0.5rem 1rem; /* Half root (5px) top/bottom, root (10px) left/right */
+  }
+  
+  /* Hover effect for nav-link inside nav */
+  nav .nav-link:hover {
+    color: var(--nav-item-link-hover);
+  }
+  
