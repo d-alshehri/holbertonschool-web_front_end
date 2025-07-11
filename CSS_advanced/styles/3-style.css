@@ -1,0 +1,39 @@
+/* Task 3: Define and use CSS variables for color */
+
+/* Root variables: global custom properties */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+  
+    /* A named variable that reuses another variable */
+    --text-color: var(--color-black);
+  }
+  
+  /* Use text-color for general text in the body */
+  body {
+    color: var(--text-color);
+  }
+  
+  /* Apply text-color to all links */
+  a {
+    color: var(--text-color);
+  }
+  
+  /* Hide visually hidden elements (unchanged from before) */
+  .visually-hidden {
+    display: none;
+  }
+  
+  /* Use color-primary for section taglines */
+  .section-tagline {
+    color: var(--color-primary);
+  }
+  
+  /* Use color-primary for blog/news categories */
+  .card-category {
+    color: var(--color-primary);
+  }
+  
