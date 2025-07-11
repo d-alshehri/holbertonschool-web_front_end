@@ -1,0 +1,27 @@
+/* Task 2: Set base colors and hide helper elements */
+
+/* Set default text color for the whole page */
+body {
+    color: #161616;
+  }
+  
+  /* Set default text color for all links */
+  a {
+    color: #161616;
+  }
+  
+  /* Hide elements meant only for screen readers or other special uses */
+  .visually-hidden {
+    display: none;
+  }
+  
+  /* Make the category text (above blog titles) appear pink/red */
+  .card-category {
+    color: #D73953;
+  }
+  
+  /* Set tagline under section headers to the same color */
+  .section-tagline {
+    color: #D73953;
+  }
+  
