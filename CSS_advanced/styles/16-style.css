@@ -1,0 +1,155 @@
+/* Task 16: Add a universal box-sizing rule and style the container class */
+
+/* Universal box-sizing rule: 
+   This ensures padding and borders are included within the width and height of elements,
+   making layout calculations easier and more intuitive */
+   *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+  
+  /* Document ========================================================================== */
+  html {
+    line-height: 1.15; /* Improve readability with line height */
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling on mobile */
+  }
+  
+  /* Sections ========================================================================== */
+  body {
+    margin: 0; /* Remove default body margin */
+  }
+  
+  /* Grouping content ========================================================================== */
+  main {
+    display: block;
+  }
+  
+  /* Text-level semantics ========================================================================== */
+  hr {
+    box-sizing: content-box; /* Use default box-sizing for hr */
+    height: 0;
+    overflow: visible;
+  }
+  
+  pre {
+    font-family: monospace, monospace; /* Monospaced font for preformatted text */
+    font-size: 1em;
+  }
+  
+  /* Links ========================================================================== */
+  a {
+    background-color: transparent; /* Remove link background */
+  }
+  
+  /* Text-level semantics ========================================================================== */
+  abbr[title] {
+    border-bottom: none; /* Remove border on abbreviations */
+    text-decoration: underline; /* Underline text */
+    text-decoration: underline dotted; /* Dotted underline */
+  }
+  
+  /* Forms ========================================================================== */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* Inherit fonts for form controls */
+    font-size: 100%; /* Use default font size */
+    line-height: 1.15;
+    margin: 0;
+  }
+  
+  button,
+  input {
+    overflow: visible; /* Make overflow visible for buttons and inputs */
+  }
+  
+  button,
+  select {
+    text-transform: none; /* Remove default uppercase styles */
+  }
+  
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button; /* Use native button styles */
+  }
+  
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  /* Remove the inheritance of text transform in Firefox */
+  textarea {
+    -moz-tab-size: 4;
+    tab-size: 4;
+  }
+  
+  fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+  }
+  
+  legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+  }
+  
+  /* Progress ========================================================================== */
+  progress {
+    vertical-align: baseline;
+  }
+  
+  /* Lists ========================================================================== */
+  ol,
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Tables ========================================================================== */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  td,
+  th {
+    padding: 0;
+  }
+  
+  /* Custom styles for this task */
+  
+  /* Placeholder for section-tagline styles, replace with your own */
+  .section-tagline {
+    /* Add your styles here if needed */
+  }
+  
+  /* Container class styles */
+  /* Makes container 960px wide and centers it horizontally using auto margins */
+  .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
