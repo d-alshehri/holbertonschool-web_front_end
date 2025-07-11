@@ -1,0 +1,14 @@
+/* Task 11: Custom property for text-transform and styling for section-tagline */
+
+:root {
+    --section-tagline-transform: uppercase; /* new custom property */
+    --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; /* make sure this matches your previous font-family-title */
+    --font-weight-bold: 700; /* make sure this matches your previous font-weight-bold */
+  }
+  
+  .section-tagline {
+    font-family: var(--font-family-title);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary); /* keeping color consistent from previous tasks */
+  }
